@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+
+# Environment files
+.env
+
+# PaperHarvester output & cache
+papers/
+*.part
+.cache/
+.quarantine/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+data/

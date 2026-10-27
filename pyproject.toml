@@ -1,0 +1,34 @@
+[project]
+name = "paperharvester"
+version = "0.1.0"
+description = "Production-quality academic paper downloader with multi-source fallback resolution"
+readme = "README.md"
+authors = [
+    { name = "Chi", email = "ndai6653@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27.0",
+    "pypdf>=4.0.0",
+    "rich>=13.7.0",
+]
+
+[project.scripts]
+paperharvester = "paperharvester:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "respx>=0.21.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-m 'not live'"
+markers = [
+    "live: live network smoke tests against real endpoints (run with -m live)",
+]
